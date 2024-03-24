@@ -1,4 +1,4 @@
-let host = "http://localhost:8080";
+let host = "https://midterm-backend-latest.onrender.com";
 let quizzes = [];
 let currentQuizIndex = 0;
 let currentQuestionIndex = 0;
