@@ -1,21 +1,65 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-  .questions {
-    width: 70%;
-    float: left;
-    padding: 15px;
-    border: 1px solid orange;
-    margin-right: 5%;
-  }
-  
+.questions {
+  width: 70%;
+  float: left;
+  padding: 15px;
+  border: 1px solid orange;
+  margin-right: 5%;
+}
+
+#questionBank {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.quiz {
+  width: 25%;
+  float: right;
+  padding: 15px;
+  border: 1px solid yellow;
+}
+
+.quiz button {
+  display: block;
+  margin-top: 10px;
+}
+
+.card {
+  width: calc(25% - 10px);
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card:hover {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .questions,
   .quiz {
-    width: 25%;
-    float: right;
-    padding: 15px;
-    border: 1px solid yellow;
+    width: 100%;
+    float: none;
   }
 
-  
+  .card {
+    width: calc(50% - 10px);
+  }
+}
 
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}

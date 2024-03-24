@@ -1,0 +1,50 @@
+.hide {
+  display: none;
+}
+
+#quizCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.quiz-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.quiz-card:hover {
+  background-color: #f0f0f0;
+}
+
+#quizContainer {
+  margin-top: 20px;
+}
+
+#quizCard {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#quizCard img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#questionProgress {
+  text-align: center;
+}
+
+#scoreContainer {
+  text-align: center;
+}

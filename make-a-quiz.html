@@ -3,9 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Create a Quiz</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="make-a-quiz.css">
 </head>
 <body>
-  
+  <ul class="topnav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="add-question.html">Add questions</a></li>
+    <li><a class="active" href="make-a-quiz.html">Create a quiz</a></li>
+    <li><a href="take-a-quiz.html">Take a quiz</a></li>
+    <li class="right"><a href="#about">About</a></li>
+  </ul>
+
+  <div class="questions">
+    <h2>Questions Bank</h2>
+    <p>Click on a question to add it to the quiz</p>
+    <div id="questionBank"></div>
+  </div>
+
+  <div class="quiz">
+    <h2>The new Quiz (<span id="questionCount">0</span> questions)</h2>
+    <p>Quiz title: <input type="text" id="quizTitle"></p>
+    <button onclick="saveChanges()">Save your changes</button>
+    <button onclick="saveAndNew()">Save this quiz and start a new one</button>
+    <p><strong>If you want to remove a question from the quiz, you can click on the question here and it will be removed from the quiz.</strong></p>
+    <div id="quizQuestions"></div>
+  </div>
+
+  <script src="make-a-quiz.js"></script>
 </body>
 </html>

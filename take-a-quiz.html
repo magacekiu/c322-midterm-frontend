@@ -3,9 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Take a Quiz</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="take-a-quiz.css">
 </head>
 <body>
-  
+  <ul class="topnav" id="topNav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="add-question.html">Add questions</a></li>
+    <li><a href="make-a-quiz.html">Create a quiz</a></li>
+    <li><a class="active" href="take-a-quiz.html">Take a quiz</a></li>
+    <li class="right"><a href="#about">About</a></li>
+  </ul>
+
+  <div id="quizList">
+    <h2>Here are the list of available quizzes. Click on a quiz to start taking the quiz.</h2>
+    <div id="quizCards"></div>
+  </div>
+
+  <div id="quizContainer" class="hide">
+    <div id="quizCard">
+      <img id="questionImage" src="" alt="Question Image">
+      <h3 id="questionId"></h3>
+      <p id="questionDescription"></p>
+      <form id="answerForm">
+        <div>
+          <input type="radio" name="answer" value="0" id="choice0">
+          <label for="choice0"></label>
+        </div>
+        <div>
+          <input type="radio" name="answer" value="1" id="choice1">
+          <label for="choice1"></label>
+        </div>
+        <div>
+          <input type="radio" name="answer" value="2" id="choice2">
+          <label for="choice2"></label>
+        </div>
+      </form>
+    </div>
+    <div class="controls">
+      <button id="prevButton" onclick="prevQuestion()">Previous</button>
+      <span id="questionProgress"></span>
+      <button id="nextButton" onclick="nextQuestion()">Next</button>
+    </div>
+  </div>
+
+  <div id="scoreContainer" class="hide">
+    <h2>You completed the quiz: <span id="quizTitle"></span></h2>
+    <h3>Your Score: <span id="score"></span></h3>
+  </div>
+
+  <script src="take-a-quiz.js"></script>
 </body>
 </html>
